@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F1EADB;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #b10928;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img {
+    width: 15%;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #f3eded;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #f3eded;
+    color: #b10928;
+    border-radius: 10px;
+}
+
+.cards {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #F1EADB;
+}
+
+.three {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.all {
+    width: 320px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.all img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.all h3 {
+    font-size: 24px;
+    color: #b10928;
+    margin-bottom: 10px;
+}
+
+.all p {
+    font-size: 16px;
+    color: #0e0808;
+    line-height: 24px;
+    padding: 5px;
+}
+
+.all:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: #b10928;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    background-color: white;
+    width: 100%;
+    height: 4px;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+@media screen and (max-width: 720px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .three {
+        justify-content: center;
+    }
+
+    .all {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .nav {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .three {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .all h3 {
+        font-size: 20px;
+    }
+
+    .all p {
+        font-size: 14px;
+    }
+}
